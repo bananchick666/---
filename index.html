@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Производство ангаров под ключ | Строительство от 32 000 руб/м²</title>
+    <meta name="description" content="Профессиональное строительство ангаров любых типов. Прогрессивные скидки до 30 000 руб. Расчет стоимости онлайн.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        body {
+            color: #333;
+            line-height: 1.6;
+        }
+        header {
+            background-color: #fff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        .header-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2a5885;
+        }
+        .phone {
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .header-buttons {
+            display: flex;
+            gap: 15px;
+        }
+        .btn {
+            padding: 10px 20px;
+            border-radius: 4px;
+            font-weight: bold;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s;
+        }
+        .btn-primary {
+            background-color: #ff6b00;
+            color: white;
+            border: none;
+        }
+        .btn-outline {
+            border: 2px solid #ff6b00;
+            color: #ff6b00;
+            background: white;
+        }
+        nav {
+            background-color: #2a5885;
+        }
+        .nav-menu {
+            display: flex;
+            list-style: none;
+        }
+        .nav-menu li {
+            position: relative;
+        }
+        .nav-menu li a {
+            color: white;
+            text-decoration: none;
+            display: block;
+            padding: 15px 20px;
+            transition: background 0.3s;
+        }
+        .nav-menu li a:hover {
+            background-color: #3a6ea5;
+        }
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://sk-alians.com/wp-content/uploads/2022/06/angar-1.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 180px 0 100px;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 42px;
+            margin-bottom: 20px;
+        }
+        .hero p {
+            font-size: 20px;
+            max-width: 800px;
+            margin: 0 auto 30px;
+        }
+        .price-tag {
+            background-color: rgba(255,255,255,0.9);
+            color: #333;
+            display: inline-block;
+            padding: 15px 30px;
+            border-radius: 4px;
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 30px;
+        }
+        .discount-badge {
+            background-color: #ff6b00;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 16px;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+        .section {
+            padding: 80px 0;
+        }
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+            font-size: 36px;
+        }
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+        }
+        .project-card {
+            border: 1px solid #eee;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        .project-image {
+            height: 250px;
+            background-size: cover;
+            background-position: center;
+        }
+        .project-info {
+            padding: 20px;
+        }
+        .project-title {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+        .project-price {
+            color: #ff6b00;
+            font-weight: bold;
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+        footer {
+            background-color: #2a5885;
+            color: white;
+            padding: 50px 0 20px;
+        }
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+        .footer-column h3 {
+            margin-bottom: 20px;
+            font-size: 20px;
+        }
+        .footer-column ul {
+            list-style: none;
+        }
+        .footer-column ul li {
+            margin-bottom: 10px;
+        }
+        .footer-column ul li a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .footer-column ul li a:hover {
+            color: white;
+        }
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: #ccc;
+        }
+        .telegram-widget {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: #0088cc;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            cursor: pointer;
+            z-index: 1000;
+        }
+        .calc-form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+        .form-control {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .calc-result {
+            background: #f5f5f5;
+            padding: 20px;
+            border-radius: 6px;
+            margin-bottom: 25px;
+        }
+        .result-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+        @media (max-width: 768px) {
+            .header-top {
+                flex-direction: column;
+                gap: 15px;
+            }
+            .nav-menu {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-top">
+                <div class="logo">АНГАРСТРОЙ</div>
+                <div class="phone">+7 (XXX) XXX-XX-XX</div>
+                <div class="header-buttons">
+                    <a href="#calculator" class="btn btn-primary">Рассчитать стоимость</a>
+                    <a href="#callback" class="btn btn-outline">Заказать звонок</a>
+                </div>
+            </div>
+        </div>
+        <nav>
+            <div class="container">
+                <ul class="nav-menu">
+                    <li><a href="#projects">Проекты и цены</a></li>
+                    <li><a href="#services">Услуги</a></li>
+                    <li><a href="#about">О компании</a></li>
+                    <li><a href="#contacts">Контакты</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Профессиональное строительство ангаров под ключ</h1>
+            <p>Быстровозводимые конструкции любой сложности с гарантией 5 лет</p>
+            <div class="price-tag">От 32 000 руб. за квадратный метр</div>
+            <div class="discount-badge">Прогрессивная скидка до 30 000 руб.</div>
+            <a href="#calculator" class="btn btn-primary" style="padding: 15px 30px; font-size: 18px;">Рассчитать стоимость</a>
+        </div>
+    </section>
+
+    <section id="projects" class="section">
+        <div class="container">
+            <h2 class="section-title">Проекты и цены</h2>
+            <div class="projects">
+                <div class="project-card">
+                    <div class="project-image" style="background-image: url('https://sk-alians.com/wp-content/uploads/2022/06/angar-1.jpg');"></div>
+                    <div class="project-info">
+                        <h3 class="project-title">Складской ангар</h3>
+                        <div class="project-price">От 32 000 руб./м²</div>
+                        <p>Оптимальное решение для хранения товаров и оборудования. Быстрый монтаж, надежная конструкция.</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image" style="background-image: url('https://sk-alians.com/wp-content/uploads/2022/06/angar-2.jpg');"></div>
+                    <div class="project-info">
+                        <h3 class="project-title">Сельскохозяйственный ангар</h3>
+                        <div class="project-price">От 34 000 руб./м²</div>
+                        <p>Специальные конструкции для хранения сельхозпродукции и техники с усиленной вентиляцией.</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image" style="background-image: url('https://sk-alians.com/wp-content/uploads/2022/06/angar-3.jpg');"></div>
+                    <div class="project-info">
+                        <h3 class="project-title">Промышленный ангар</h3>
+                        <div class="project-price">От 38 000 руб./м²</div>
+                        <p>Прочные конструкции для промышленных предприятий с возможностью установки кранового оборудования.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="calculator" class="section" style="background-color: #f9f9f9;">
+        <div class="container">
+            <h2 class="section-title">Калькулятор стоимости</h2>
+            <div class="calc-form">
+                <form id="angar-calculator">
+                    <div class="form-group">
+                        <label for="angar-type">Тип ангара:</label>
+                        <select id="angar-type" class="form-control">
+                            <option value="35000">Стандартный (от 35 000 руб/м²)</option>
+                            <option value="37000">Усиленный (от 37 000 руб/м²)</option>
+                            <option value="40000">Утепленный (от 40 000 руб/м²)</option>
+                            <option value="45000">Специальный (от 45 000 руб/м²)</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="length">Длина ангара (м):</label>
+                        <input type="number" id="length" class="form-control" min="5" max="100" value="10">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="width">Ширина ангара (м):</label>
+                        <input type="number" id="width" class="form-control" min="5" max="50" value="6">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="height">Высота ангара (м):</label>
+                        <input type="number" id="height" class="form-control" min="3" max="12" value="4">
+                    </div>
+                    
+                    <div class="form-group" style="display: flex; align-items: center;">
+                        <input type="checkbox" id="discount" checked style="margin-right: 10px;">
+                        <label for="discount" style="margin-bottom: 0;">Применить прогрессивную скидку (до 30 000 руб.)</label>
+                    </div>
+                    
+                    <div class="calc-result">
+                        <div class="result-row">
+                            <span>Площадь ангара:</span>
+                            <strong id="total-area">0 м²</strong>
+                        </div>
+                        <div class="result-row">
+                            <span>Базовая стоимость:</span>
+                            <strong id="base-price">0 руб.</strong>
+                        </div>
+                        <div class="result-row" style="color: #ff6b00;">
+                            <span>Ваша скидка:</span>
+                            <strong id="discount-value">0 руб.</strong>
+                        </div>
+                        <div class="result-row" style="font-size: 18px; font-weight: bold; margin-top: 10px;">
+                            <span>Итого к оплате:</span>
+                            <strong id="total-price">0 руб.</strong>
+                        </div>
+                    </div>
+                    
+                    <button type="button" id="calculate-btn" class="btn btn-primary" style="width: 100%; padding: 15px; font-size: 16px;">Рассчитать стоимость</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="section">
+        <div class="container">
+            <h2 class="section-title">Наши услуги</h2>
+            <div class="projects">
+                <div class="project-card">
+                    <div class="project-image" style="background-image: url('https://sk-alians.com/wp-content/uploads/2022/06/service1.jpg');"></div>
+                    <div class="project-info">
+                        <h3 class="project-title">Проектирование ангаров</h3>
+                        <p>Разработка индивидуальных проектов с учетом всех технических требований и норм. Создание 3D-визуализации.</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image" style="background-image: url('https://sk-alians.com/wp-content/uploads/2022/06/service2.jpg');"></div>
+                    <div class="project-info">
+                        <h3 class="project-title">Строительство под ключ</h3>
+                        <p>Полный цикл работ от проектирования до сдачи объекта "под ключ" с гарантией качества.</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image" style="background-image: url('https://sk-alians.com/wp-content/uploads/2022/06/service3.jpg');"></div>
+                    <div class="project-info">
+                        <h3 class="project-title">Монтажные работы</h3>
+                        <p>Качественный монтаж конструкций с использованием современного оборудования и материалов.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="section" style="background-color: #2a5885; color: white;">
+        <div class="container">
+            <h2 class="section-title">О компании</h2>
+            <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+                <p style="font-size: 18px; margin-bottom: 30px;">Компания "АнгарСтрой" - лидер на рынке строительства быстровозводимых ангаров с 2010 года. Наша миссия - предоставлять клиентам качественные решения по оптимальной цене.</p>
+                <div style="display: flex; justify-content: center; gap: 30px; flex-wrap: wrap;">
+                    <div>
+                        <div style="font-size: 36px; font-weight: bold;">12+</div>
+                        <div>лет опыта</div>
+                    </div>
+                    <div>
+                        <div style="font-size: 36px; font-weight: bold;">350+</div>
+                        <div>реализованных проектов</div>
+                    </div>
+                    <div>
+                        <div style="font-size: 36px; font-weight: bold;">5 лет</div>
+                        <div>гарантии на конструкции</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacts" class="section">
+        <div class="container">
+            <h2 class="section-title">Контакты</h2>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 50px;">
+                <div>
+                    <h3 style="margin-bottom: 20px;">Наши реквизиты</h3>
+                    <p style="margin-bottom: 15px;"><strong>Адрес:</strong> г. Москва, ул. Строителей, 15, офис 204</p>
+                    <p style="margin-bottom: 15px;"><strong>Телефон:</strong> +7 (XXX) XXX-XX-XX</p>
+                    <p style="margin-bottom: 15px;"><strong>Email:</strong> info@angarstroy.ru</p>
+                    <p style="margin-bottom: 15px;"><strong>Режим работы:</strong> Пн-Пт: 9:00-18:00</p>
+                </div>
+                <div>
+                    <h3 style="margin-bottom: 20px;">Оставьте заявку</h3>
+                    <form id="callback-form" style="display: grid; gap: 15px;">
+                        <input type="text" id="callback-name" placeholder="Ваше имя" required style="padding: 12px; border: 1px solid #ddd; border-radius: 4px;">
+                        <input type="tel" id="callback-phone" placeholder="Ваш телефон" required style="padding: 12px; border: 1px solid #ddd; border-radius: 4px;">
+                        <textarea id="callback-message" placeholder="Ваше сообщение" style="padding: 12px; border: 1px solid #ddd; border-radius: 4px; height: 100px;"></textarea>
+                        <button type="submit" class="btn btn-primary" style="width: 100%; padding: 15px; font-size: 16px;">Заказать звонок</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Компания</h3>
+                    <ul>
+                        <li><a href="#about">О нас</a></li>
+                        <li><a href="#projects">Проекты</a></li>
+                        <li><a href="#services">Услуги</a></li>
+                        <li><a href="#contacts">Контакты</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Услуги</h3>
+                    <ul>
+                        <li><a href="#">Проектирование</a></li>
+                        <li><a href="#">Строительство</a></li>
+                        <li><a href="#">Монтаж</a></li>
+                        <li><a href="#">Реконструкция</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Контакты</h3>
+                    <ul>
+                        <li>г. Москва, ул. Строителей, 15</li>
+                        <li>+7 (XXX) XXX-XX-XX</li>
+                        <li>info@angarstroy.ru</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                © 2023 АнгарСтрой. Все права защищены.
+            </div>
+        </div>
+    </footer>
+
+    <div class="telegram-widget" onclick="window.open('https://t.me/angarstroy_bot', '_blank');">
+        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="white">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69.03-.09.06-.42-.06-.59s-.37-.14-.63-.05c-.27.06-4.55 2.88-6.45 4.22-.59.42-1.13.63-1.61.64-.53.01-1.56-.3-1.56-.3s-1.07-.35-.15-1.08c.33-.26.74-.58 1.23-.88 2.56-1.58 4.39-2.7 6.83-4.22.86-.56 1.72-1.33 2.6-1.29.6.03 1.9.24 1.12 1.65z"/>
+        </svg>
+    </div>
+
+    <script>
+        // Плавная прокрутка
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Калькулятор стоимости
+        document.addEventListener('DOMContentLoaded', function() {
+            const calculator = document.getElementById('angar-calculator');
+            const calculateBtn = document.getElementById('calculate-btn');
+            
+            // Цены за квадратный метр
+            const prices = {
+                '35000': 35000,
+                '37000': 37000,
+                '40000': 40000,
+                '45000': 45000
+            };
+            
+            // Функция расчета
+            function calculate() {
+                const type = document.getElementById('angar-type').value;
+                const length = parseFloat(document.getElementById('length').value) || 0;
+                const width = parseFloat(document.getElementById('width').value) || 0;
+                const height = parseFloat(document.getElementById('height').value) || 0;
+                const applyDiscount = document.getElementById('discount').checked;
+                
+                // Рассчитываем площадь (2 стены + крыша)
+                const area = (length * height * 2) + (length * width);
+                document.getElementById('total-area').textContent = area.toFixed(2) + ' м²';
+                
+                // Базовая стоимость
+                const basePrice = area * prices[type];
+                document.getElementById('base-price').textContent = basePrice.toLocaleString('ru-RU') + ' руб.';
+                
+                // Рассчитываем скидку (прогрессивную)
+                let discount = 0;
+                if (applyDiscount) {
+                    // Скидка растет с площадью (но не более 30 000 руб.)
+                    discount = Math.min(area * 150, 30000);
+                    // Минимальная скидка 5 000 руб. при площади от 50 м²
+                    if (area >= 50) discount = Math.max(discount, 5000);
+                }
+                document.getElementById('discount-value').textContent = '-' + discount.toLocaleString('ru-RU') + ' руб.';
+                
+                // Итоговая стоимость
+                const totalPrice = basePrice - discount;
+                document.getElementById('total-price').textContent = totalPrice.toLocaleString('ru-RU') + ' руб.';
+            }
+            
+            // Считаем при загрузке страницы
+            calculate();
+            
+            // Считаем при изменении параметров
+            calculator.addEventListener('input', calculate);
+            calculateBtn.addEventListener('click', calculate);
+            
+            // Отправка формы обратной связи
+            document.getElementById('callback-form').addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                const name = document.getElementById('callback-name').value;
+                const phone = document.getElementById('callback-phone').value;
+                const message = document.getElementById('callback-message').value;
+                
+                // Здесь можно добавить отправку данных на сервер
+                // Временное решение - вывод в консоль
+                console.log('Заявка на звонок:', {name, phone, message});
+                alert('Спасибо! Мы скоро с вами свяжемся.');
+                
+                // Очищаем форму
+                this.reset();
+            });
+            
+            // Отправка в Telegram (реальный бот)
+            function sendToTelegram(data) {
+                const botToken = 'YOUR_BOT_TOKEN'; // Заменить на реальный токен
+                const chatId = 'YOUR_CHAT_ID'; // Заменить на ваш chat_id
+                
+                const text = `Новая заявка с сайта:%0AИмя: ${data.name}%0AТелефон: ${data.phone}%0AСообщение: ${data.message || 'Нет сообщения'}`;
+                
+                fetch(`https://api.telegram.org/bot${botToken}/sendMessage?chat_id=${chatId}&text=${text}`)
+                    .then(response => console.log('Сообщение отправлено'))
+                    .catch(error => console.error('Ошибка:', error));
+            }
+        });
+    </script>
+</body>
+</html>
